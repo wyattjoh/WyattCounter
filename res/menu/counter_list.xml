@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/addCounterAction"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_new"
+        android:title="Add Counter"
+        android:onClick="addCounterAction"
+        />
+
+</menu>

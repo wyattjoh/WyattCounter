@@ -1,0 +1,20 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="0px"
+    android:paddingLeft="0px"
+    android:paddingRight="0px"
+    android:paddingTop="0px"
+    tools:context=".CounterListActivity" >
+
+    <ListView
+        android:id="@+id/listViewMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" >
+
+    </ListView>
+
+</RelativeLayout>
