@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -110,7 +111,7 @@ public class CounterListActivity extends Activity {
 			
 			titleText.setTag(position);
 			
-			Button detailsButton = (Button) itemView.findViewById(R.id.detailsButton);
+			ImageButton detailsButton = (ImageButton) itemView.findViewById(R.id.detailsButton);
 			
 			Integer positionInteger = Integer.valueOf(position);
 			detailsButton.setTag(positionInteger);
