@@ -15,7 +15,7 @@
         <TextView
             android:id="@+id/counterTitle"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
+            android:layout_height="50dp"
             android:clickable="true"
             android:gravity="center"
             android:text="COUNTER NAME"
@@ -26,7 +26,7 @@
         <TextView
             android:id="@+id/counterCount"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="20dp"
             android:gravity="center"
             android:text="COUNTER COUNT"
             android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -35,9 +35,10 @@
     <ImageButton
         android:id="@+id/detailsButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="70dp"
         android:layout_alignBottom="@+id/linearLayout1"
         android:layout_alignParentRight="true"
+        android:minHeight="70dp"
         android:onClick="detailsButton"
         android:src="@drawable/ic_action_collection" />
 
