@@ -45,8 +45,8 @@ public class CounterListActivity extends Activity {
 		// TODO Auto-generated method stub
 		super.onResume();
 		
-		// Update data views
-		this.counterListAdapter.notifyDataSetChanged();
+		// Refresh the list
+		this.refreshList();
 	}
 
 	private void populateListView() {
@@ -54,6 +54,17 @@ public class CounterListActivity extends Activity {
 		this.counterListAdapter = new MyListAdapter();
 		ListView list = (ListView) findViewById(R.id.listViewMain);
 		list.setAdapter(this.counterListAdapter);
+		
+		// Refresh the list
+		this.refreshList();
+	}
+	
+	private void refreshList() {
+		// Sort the list
+		this.counterListController.sortList();
+		
+		// Update data views
+		this.counterListAdapter.notifyDataSetChanged();
 	}
 	
 	private class MyListAdapter extends ArrayAdapter<Counter> {
@@ -148,8 +159,8 @@ public class CounterListActivity extends Activity {
             	   // Add a counter with this name
             	   counterListController.addCounter(counterName);
             	   
-            	   // Update list
-            	   counterListAdapter.notifyDataSetChanged();
+            	   // Refresh the list
+            	   refreshList();
                }
 	        });
 

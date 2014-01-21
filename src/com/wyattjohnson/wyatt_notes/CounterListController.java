@@ -58,4 +58,9 @@ public class CounterListController implements CounterListInterface {
 	public ArrayList<Counter> getList() {
 		return counterList.getList();
 	}
+
+	@Override
+	public void sortList() {
+		counterList.sortList();
+	}
 }

@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 import android.content.Context;
 
@@ -31,6 +33,15 @@ public class CounterList implements CounterListInterface {
 	
 	private void init() {
 		this.counterModels = new ArrayList<Counter>();	
+	}
+	
+	public void sortList() {
+		Collections.sort(counterModels, new Comparator<Counter>() {
+			public int compare(Counter arg0, Counter arg1) {
+				// TODO Auto-generated method stub
+				return arg0.getCount() - arg1.getCount();
+			}
+		});
 	}
 	
 	public Counter addCounter(String theName) {

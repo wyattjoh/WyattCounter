@@ -7,4 +7,5 @@ public interface CounterListInterface {
 	public void removeCounter(int index);
 	public Counter getCounter(int index);
 	public ArrayList<Counter> getList();
+	public void sortList();
 }
