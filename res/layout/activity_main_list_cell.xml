@@ -2,40 +2,42 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/activity_main_list_cell"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/counterTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/detailsButton"
-        android:clickable="true"
-        android:gravity="center"
-        android:text="COUNTER NAME"
-        android:textAllCaps="true"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textColor="#4492C2" />
-
-    <TextView
-        android:id="@+id/counterCount"
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignRight="@+id/counterTitle"
-        android:layout_below="@+id/counterTitle"
-        android:gravity="center"
-        android:text="COUNTER COUNT"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/detailsButton"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/counterTitle"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:clickable="true"
+            android:gravity="center"
+            android:text="COUNTER NAME"
+            android:textAllCaps="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#4492C2" />
+
+        <TextView
+            android:id="@+id/counterCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="COUNTER COUNT"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    </LinearLayout>
 
     <ImageButton
         android:id="@+id/detailsButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/counterCount"
+        android:layout_alignBottom="@+id/linearLayout1"
         android:layout_alignParentRight="true"
-        android:layout_alignParentTop="true"
         android:onClick="detailsButton"
         android:src="@drawable/ic_action_collection" />
 
