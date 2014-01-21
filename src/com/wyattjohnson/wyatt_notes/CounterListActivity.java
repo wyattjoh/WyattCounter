@@ -11,9 +11,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -91,22 +91,25 @@ public class CounterListActivity extends Activity {
 			TextView counterText = (TextView) itemView.findViewById(R.id.counterCount);
 			counterText.setText(currentCounter.getCount().toString());
 			
+			LinearLayout clickAreaLayout = (LinearLayout) itemView.findViewById(R.id.counterIncrementArea);
+			clickAreaLayout.setTag(position);
+			
 			// Setup events
-			titleText.setOnClickListener(new View.OnClickListener() {
+			clickAreaLayout.setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View v) {
                     // do you work here
+                	LinearLayout clickAreaLayout = (LinearLayout) v.findViewById(R.id.counterIncrementArea);
                 	TextView titleText = (TextView) v.findViewById(R.id.counterTitle);
                 	
-                	String message = "You clicked # " + titleText.getTag()
+                	
+                	String message = "You clicked # " + clickAreaLayout.getTag()
     						+ ", which is string: " + titleText.getText().toString();
     				
     				Toast.makeText(CounterListActivity.this, message, Toast.LENGTH_LONG).show();
                  }
 			});
-			
-			titleText.setTag(position);
 			
 			ImageButton detailsButton = (ImageButton) itemView.findViewById(R.id.detailsButton);
 			

@@ -15,7 +15,7 @@ public class CounterListController implements CounterListInterface {
 	private static CounterListController singleton = null;
 	
 	private CounterList counterList = null;
-	private Context context;
+//	private Context context;
 	private Counter selectedCounter;
 	
 	public static CounterListController shared(Context context) {
@@ -27,7 +27,7 @@ public class CounterListController implements CounterListInterface {
 	
 	private CounterListController(Context context) {
 		super();
-		this.context = context;
+//		this.context = context;
 		this.counterList = new CounterList(context);
 	}
 	
