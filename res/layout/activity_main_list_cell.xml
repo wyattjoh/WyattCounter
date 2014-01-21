@@ -43,6 +43,6 @@
         android:layout_alignParentRight="true"
         android:minHeight="70dp"
         android:onClick="detailsButton"
-        android:src="@drawable/ic_action_collection" />
+        android:src="@drawable/ic_action_view_as_list" />
 
 </RelativeLayout>

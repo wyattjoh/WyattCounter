@@ -21,20 +21,21 @@ public final class R {
         public static final int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int ic_action_collection=0x7f020000;
-        public static final int ic_action_new=0x7f020001;
+        public static final int ic_action_new=0x7f020000;
+        public static final int ic_action_view_as_list=0x7f020001;
         public static final int ic_launcher=0x7f020002;
     }
     public static final class id {
         public static final int activity_main_list_cell=0x7f080005;
-        public static final int addCounterAction=0x7f08000a;
+        public static final int addCounterAction=0x7f08000b;
         public static final int addCounterTextField=0x7f080000;
-        public static final int counterCount=0x7f080008;
+        public static final int counterCount=0x7f080009;
         public static final int counterDetailCount=0x7f080002;
         public static final int counterDetailTitle=0x7f080001;
-        public static final int counterTitle=0x7f080007;
-        public static final int detailsButton=0x7f080006;
-        public static final int linearLayout1=0x7f080009;
+        public static final int counterIncrementArea=0x7f080006;
+        public static final int counterTitle=0x7f080008;
+        public static final int detailsButton=0x7f080007;
+        public static final int linearLayout1=0x7f08000a;
         public static final int listView1=0x7f080003;
         public static final int listViewMain=0x7f080004;
     }
