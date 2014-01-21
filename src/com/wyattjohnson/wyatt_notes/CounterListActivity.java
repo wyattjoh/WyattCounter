@@ -34,9 +34,6 @@ public class CounterListActivity extends Activity {
 //		counterListController.addCounter("Horses");
 //		counterListController.addCounter("Trains");
 		
-		// Update top bar
-		getActionBar().setTitle("Wyatt's Counter");
-		
 		// Custom list view from: http://www.youtube.com/watch?v=WRANgDgM2Zg
 		populateListView();
 	}
