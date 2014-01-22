@@ -26,13 +26,6 @@ public class CounterListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_list);
 		
-		
-//		counterListController.addCounter("Cows");
-//		counterListController.addCounter("Dogs");
-//		counterListController.addCounter("Oranges");
-//		counterListController.addCounter("Horses");
-//		counterListController.addCounter("Trains");
-		
 		// Custom list view from: http://www.youtube.com/watch?v=WRANgDgM2Zg
 		populateListView();
 	}
