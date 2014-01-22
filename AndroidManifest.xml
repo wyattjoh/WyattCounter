@@ -5,8 +5,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="11"
-        android:targetSdkVersion="18" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="16" />
 
     <application
         android:allowBackup="true"
@@ -22,10 +22,20 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CounterListDetailActivity"
+        <activity
+            android:name="com.wyattjohnson.wyatt_notes.CounterListDetailActivity"
             android:label="@string/title_activity_counter_list_detail"
-            android:parentActivityName="com.wyattjohnson.wyatt_notes.CounterListActivity">
-            <meta-data android:name="android.support.PARENT_ACTIVITY"
+            android:parentActivityName="com.wyattjohnson.wyatt_notes.CounterListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.wyattjohnson.wyatt_notes.CounterListActivity" />
+        </activity>
+        <activity
+            android:name="com.wyattjohnson.wyatt_notes.CounterListStats"
+            android:label="@string/title_activity_counter_list_stats"
+            android:parentActivityName="com.wyattjohnson.wyatt_notes.CounterListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.wyattjohnson.wyatt_notes.CounterListActivity" />
         </activity>
     </application>

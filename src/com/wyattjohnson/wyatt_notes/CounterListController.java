@@ -63,4 +63,24 @@ public class CounterListController implements CounterListInterface {
 	public void sortList() {
 		counterList.sortList();
 	}
+
+	@Override
+	public void incrementCounterAtIndex(int index) {
+		counterList.incrementCounterAtIndex(index);
+	}
+
+	@Override
+	public void resetCounterAtIndex(int index) {
+		counterList.resetCounterAtIndex(index);
+	}
+
+	@Override
+	public void deleteCounterAtIndex(int index) {
+		counterList.deleteCounterAtIndex(index);
+	}
+
+	@Override
+	public int getListSize() {
+		return counterList.getListSize();
+	}
 }

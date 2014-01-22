@@ -21,7 +21,7 @@ import android.content.Context;
  *
  */
 public class CounterList implements CounterListInterface {
-	private static final String DATABASEFILE = "counters.db";
+	private static final String DATABASEFILE = "counters.save";
 	private ArrayList<Counter> counterModels;
 	private Context context;
 
@@ -39,7 +39,7 @@ public class CounterList implements CounterListInterface {
 		Collections.sort(counterModels, new Comparator<Counter>() {
 			public int compare(Counter arg0, Counter arg1) {
 				// TODO Auto-generated method stub
-				return arg0.getCount() - arg1.getCount();
+				return arg1.getCount() - arg0.getCount();
 			}
 		});
 	}
@@ -121,5 +121,32 @@ public class CounterList implements CounterListInterface {
 	@Override
 	public ArrayList<Counter> getList() {
 		return counterModels;
+	}
+	
+	public int getListSize() {
+		return counterModels.size();
+	}
+
+	@Override
+	public void incrementCounterAtIndex(int index) {
+		Counter theCounter = getCounter(index);
+		theCounter.addCount();
+		
+		this.save();
+	}
+
+	@Override
+	public void resetCounterAtIndex(int index) {
+		Counter theCounter = getCounter(index);
+		theCounter.reset();
+		
+		this.save();
+	}
+
+	@Override
+	public void deleteCounterAtIndex(int index) {
+		this.counterModels.remove(index);
+		
+		this.save();
 	}
 }

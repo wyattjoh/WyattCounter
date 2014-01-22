@@ -39,10 +39,11 @@
         android:id="@+id/detailsButton"
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:layout_alignBottom="@+id/linearLayout1"
+        android:layout_alignBottom="@+id/counterIncrementArea"
         android:layout_alignParentRight="true"
         android:minHeight="70dp"
         android:onClick="detailsButton"
-        android:src="@drawable/ic_action_view_as_list" />
+        android:src="@drawable/ic_action_view_as_list"
+        android:contentDescription="Counter Details" />
 
 </RelativeLayout>

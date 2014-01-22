@@ -16,7 +16,6 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CounterListActivity extends Activity {
 	private CounterListController counterListController;
@@ -27,7 +26,7 @@ public class CounterListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_list);
 		
-		counterListController = CounterListController.shared(getApplicationContext());
+		
 //		counterListController.addCounter("Cows");
 //		counterListController.addCounter("Dogs");
 //		counterListController.addCounter("Oranges");
@@ -44,22 +43,23 @@ public class CounterListActivity extends Activity {
 		super.onResume();
 		
 		// Refresh the list
-		this.refreshList();
+		this.refreshList(true);
 	}
 
 	private void populateListView() {
-		// TODO Auto-generated method stub
+		this.counterListController = CounterListController.shared(getApplicationContext());
 		this.counterListAdapter = new MyListAdapter();
-		ListView list = (ListView) findViewById(R.id.listViewMain);
-		list.setAdapter(this.counterListAdapter);
 		
-		// Refresh the list
-		this.refreshList();
+		ListView list = (ListView) findViewById(R.id.counterListActivity);
+		list.setAdapter(this.counterListAdapter);
 	}
 	
-	private void refreshList() {
-		// Sort the list
-		this.counterListController.sortList();
+	private void refreshList(Boolean shouldSort) {
+		// Check if should sort the list
+		if (shouldSort) {
+			// Sort the list
+			this.counterListController.sortList();
+		}
 		
 		// Update data views
 		this.counterListAdapter.notifyDataSetChanged();
@@ -101,13 +101,13 @@ public class CounterListActivity extends Activity {
                 public void onClick(View v) {
                     // do you work here
                 	LinearLayout clickAreaLayout = (LinearLayout) v.findViewById(R.id.counterIncrementArea);
-                	TextView titleText = (TextView) v.findViewById(R.id.counterTitle);
-                	
-                	
-                	String message = "You clicked # " + clickAreaLayout.getTag()
-    						+ ", which is string: " + titleText.getText().toString();
+                	int index = ((Integer)clickAreaLayout.getTag()).intValue();
     				
-    				Toast.makeText(CounterListActivity.this, message, Toast.LENGTH_LONG).show();
+                	// increment the counter
+                	counterListController.incrementCounterAtIndex(index);
+                	
+                	// Refresh the view
+                	refreshList(false);
                  }
 			});
 			
@@ -117,6 +117,11 @@ public class CounterListActivity extends Activity {
 			detailsButton.setTag(positionInteger);
 			
 			return itemView;
+		}
+
+		@Override
+		public int getCount() {
+			return counterListController.getListSize();
 		}
 		
 	}
@@ -129,7 +134,7 @@ public class CounterListActivity extends Activity {
 		counterListController.setSelectedCounterForIndex(position.intValue());
 		
 		// Create an intent to start a new activity
-		Intent intent = new Intent(CounterListActivity.this, CounterListDetailActivity.class);
+		Intent intent = new Intent(CounterListActivity.this, CounterListStats.class);
 		
 		// Start the intent
 		startActivity(intent);
@@ -161,7 +166,7 @@ public class CounterListActivity extends Activity {
             	   counterListController.addCounter(counterName);
             	   
             	   // Refresh the list
-            	   refreshList();
+            	   refreshList(true);
                }
 	        });
 
