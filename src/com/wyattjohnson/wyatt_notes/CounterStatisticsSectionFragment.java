@@ -49,6 +49,9 @@ public class CounterStatisticsSectionFragment extends Fragment {
 		// Get the currently selected Counter
 		this.selectedCounter = counterListController.getSelectedCounter();
 		
+		// Set name
+		getActivity().setTitle(this.selectedCounter.getName() + " Stats");
+		
 		int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
 		
 		switch (sectionNumber) {
