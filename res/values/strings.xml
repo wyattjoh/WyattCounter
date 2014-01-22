@@ -12,5 +12,7 @@
     <string name="title_activity_counter_list_stats">CounterListStatsActivity</string>
     <string name="theCounterTitle">Counter Title</string>
     <string name="theCounterCount">Counter Count</string>
+    <string name="resetTitle">Reset Counter</string>
+    <string name="deleteTitle">Delete Counter</string>
 
 </resources>
