@@ -10,5 +10,7 @@
     <string name="title_section2">Daily</string>
     <string name="title_section3">Weekly</string><string name="title_section4">Monthly</string>
     <string name="title_activity_counter_list_stats">CounterListStatsActivity</string>
+    <string name="theCounterTitle">Counter Title</string>
+    <string name="theCounterCount">Counter Count</string>
 
 </resources>

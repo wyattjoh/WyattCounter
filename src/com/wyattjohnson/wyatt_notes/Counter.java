@@ -9,12 +9,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.HashMap;
-
 import android.annotation.SuppressLint;
 import android.util.LongSparseArray;
-import android.util.SparseArray;
-import android.util.SparseIntArray;
 
 /**
  * @author wyatt
