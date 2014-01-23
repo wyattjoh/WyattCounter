@@ -14,7 +14,7 @@ import android.support.v4.view.ViewPager;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class CounterListStats extends FragmentActivity implements
+public class CounterListStatisticsActivity extends FragmentActivity implements
 		ActionBar.TabListener {
 	
 	/**
@@ -106,6 +106,14 @@ public class CounterListStats extends FragmentActivity implements
 			//
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
+		case R.id.action_reset:
+			System.out.println("Got reset task");
+			finish();
+			return true;
+		case R.id.action_delete:
+			System.out.println("Got delete task");
+			finish();
+			return true;
 		}
 		return super.onOptionsItemSelected(item);
 	}
@@ -143,9 +151,9 @@ public class CounterListStats extends FragmentActivity implements
 			// getItem is called to instantiate the fragment for the given page.
 			// Return a DummySectionFragment (defined as a static inner class
 			// below) with the page number as its lone argument.
-			Fragment fragment = new CounterStatisticsSectionFragment();
+			Fragment fragment = new CounterListStatisticsFragment();
 			Bundle args = new Bundle();
-			args.putInt(CounterStatisticsSectionFragment.ARG_SECTION_NUMBER, position + 1);
+			args.putInt(CounterListStatisticsFragment.ARG_SECTION_NUMBER, position + 1);
 			fragment.setArguments(args);
 			return fragment;
 		}

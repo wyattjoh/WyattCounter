@@ -5,7 +5,9 @@ import java.util.ArrayList;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -17,9 +19,10 @@ import android.widget.TextView;
  * displays dummy text.
  */
 @SuppressLint("ValidFragment")
-public class CounterStatisticsSectionFragment extends Fragment {
+public class CounterListStatisticsFragment extends Fragment {
 	private CounterListController counterListController;
 	private Counter selectedCounter;
+	private CounterStats counterStats;
 	
 	private ArrayList<String[]> hourlyStats;
 	private ArrayList<String[]> dailyStats;
@@ -32,22 +35,22 @@ public class CounterStatisticsSectionFragment extends Fragment {
 	 */
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	
-	public CounterStatisticsSectionFragment() {
+	public CounterListStatisticsFragment() {
 		
 	}
-
+	
 	@Override
-	public View onCreateView(LayoutInflater inflater, ViewGroup container,
-			Bundle savedInstanceState) {
-		View rootView = inflater.inflate(
-				R.layout.fragment_counter_list_stats, container,
-				false);
+	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+		View rootView = inflater.inflate(R.layout.fragment_counter_list_stats, container, false);
 		
 		// Create the controller
 		this.counterListController = CounterListController.shared(getActivity().getApplicationContext());
 		
 		// Get the currently selected Counter
 		this.selectedCounter = counterListController.getSelectedCounter();
+		
+		// Get the currently selected Counter's Stats
+		this.counterStats = new CounterStats(selectedCounter);
 		
 		// Set name
 		getActivity().setTitle(this.selectedCounter.getName() + " Stats");
@@ -56,35 +59,17 @@ public class CounterStatisticsSectionFragment extends Fragment {
 		
 		switch (sectionNumber) {
 			case 1:
-				return getHourSummary(rootView);
+				return setupSummaryView(rootView, this.counterStats.getHourlyStats());
 			case 2:
-				return getDaySummary(rootView);
+				return setupSummaryView(rootView, this.counterStats.getDailyStats());
 			case 3:
-				return getWeeklySummary(rootView);
+				return setupSummaryView(rootView, this.counterStats.getWeeklyStats());
 			case 4:
-				return getMonthlySummary(rootView);
+				return setupSummaryView(rootView, this.counterStats.getMonthlyStats());
 		}
+		
+		// Should never happen
 		return rootView;
-	}
-	
-	private View getHourSummary(View rootView) {
-		this.hourlyStats = this.selectedCounter.getHourlyStats();
-		return setupSummaryView(rootView, this.hourlyStats);
-	}
-	
-	private View getDaySummary(View rootView) {
-		this.dailyStats = this.selectedCounter.getDailyStats();
-		return setupSummaryView(rootView, this.dailyStats);
-	}
-	
-	private View getWeeklySummary(View rootView) {
-		this.weeklyStats = this.selectedCounter.getWeeklyStats();
-		return setupSummaryView(rootView, this.weeklyStats);
-	}
-	
-	private View getMonthlySummary(View rootView) {
-		this.monthlyStats = this.selectedCounter.getMonthlyStats();
-		return setupSummaryView(rootView, this.monthlyStats);
 	}
 	
 	private View setupSummaryView(View rootView, ArrayList<String[]> resource) {

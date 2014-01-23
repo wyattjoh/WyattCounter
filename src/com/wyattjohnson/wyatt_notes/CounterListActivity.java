@@ -127,7 +127,7 @@ public class CounterListActivity extends Activity {
 		counterListController.setSelectedCounterForIndex(position.intValue());
 		
 		// Create an intent to start a new activity
-		Intent intent = new Intent(CounterListActivity.this, CounterListStats.class);
+		Intent intent = new Intent(CounterListActivity.this, CounterListStatisticsActivity.class);
 		
 		// Start the intent
 		startActivity(intent);
