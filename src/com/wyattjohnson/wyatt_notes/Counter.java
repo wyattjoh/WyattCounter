@@ -7,10 +7,10 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
-
 /**
  * @author wyatt
+ *
+ * Stores the data for an individual Counter
  *
  */
 public class Counter implements Serializable {	
@@ -18,10 +18,6 @@ public class Counter implements Serializable {
 	private String name;
 	private ArrayList<Long> history;
 
-	/**
-	 * @param name
-	 * @param history
-	 */
 	public Counter(String name, ArrayList<Long> history) {
 		super();
 		this.name = name;
@@ -34,29 +30,48 @@ public class Counter implements Serializable {
 		}
 	}
 
-	public String getName() {
-		return name;
+	/**
+	 * Adds a new count + date info to the Counter's ArrayList
+	 */
+	public void addCount() {
+		Calendar theCalendarDate = Calendar.getInstance();
+		theCalendarDate.setTime(new Date());
+		this.history.add(theCalendarDate.getTimeInMillis());
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	/**
+	 * @return Current count
+	 */
+	public Integer getCount() {
+		return this.history.size();
 	}
 
+	/**
+	 * @return The history of the Counter
+	 */
 	public ArrayList<Long> getHistory() {
 		return history;
 	}
 
-	public void addCount() {
-		Calendar theCalendarDate = GregorianCalendar.getInstance();
-		theCalendarDate.setTime(new Date());
-		this.history.add(theCalendarDate.getTimeInMillis());
+	/**
+	 * @return Current name of the Counter
+	 */
+	public String getName() {
+		return name;
 	}
 	
-	public Integer getCount() {
-		return this.history.size();
-	}
-	
-	public void reset() {
+	/**
+	 * Clears the history of the Counter
+	 */
+	public void resetCounts() {
 		this.history.clear();
+	}
+	
+	/**
+	 * Sets the current name of the counter
+	 * @param name
+	 */
+	public void setName(String name) {
+		this.name = name;
 	}
 }

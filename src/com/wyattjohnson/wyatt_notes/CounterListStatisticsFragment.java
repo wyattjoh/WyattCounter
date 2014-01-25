@@ -2,6 +2,7 @@ package com.wyattjohnson.wyatt_notes;
 
 import java.util.ArrayList;
 
+
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -10,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.TextView;
 
 /**
  * A dummy fragment representing a section of the app, but that simply
@@ -25,10 +25,9 @@ public class CounterListStatisticsFragment extends Fragment {
 	 */
 	public static final String ARG_SECTION_NUMBER = "section_number";
 	
-	public CounterListStatisticsFragment() {
-		
-	}
-	
+	/**
+	 * @return the current activity as a CounterListStatisticsActivity
+	 */
 	private CounterListStatisticsActivity currentActivity() {
 		return (CounterListStatisticsActivity)getActivity();
 	}
@@ -42,59 +41,34 @@ public class CounterListStatisticsFragment extends Fragment {
 		
 		int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
 		
+		// Get the right fragment data
 		switch (sectionNumber) {
 			case 1:
-				return setupSummaryView(rootView, currentActivity().getStats().getHourlyStats());
+				populateFragment(rootView, currentActivity().getStats().getHourlyStats());
+				break;
 			case 2:
-				return setupSummaryView(rootView, currentActivity().getStats().getDailyStats());
+				populateFragment(rootView, currentActivity().getStats().getDailyStats());
+				break;
 			case 3:
-				return setupSummaryView(rootView, currentActivity().getStats().getWeeklyStats());
+				populateFragment(rootView, currentActivity().getStats().getWeeklyStats());
+				break;
 			case 4:
-				return setupSummaryView(rootView, currentActivity().getStats().getMonthlyStats());
+				populateFragment(rootView, currentActivity().getStats().getMonthlyStats());
+				break;
 		}
 		
-		// Should never happen
+		// Return the view
 		return rootView;
 	}
 	
-	private View setupSummaryView(View rootView, ArrayList<String[]> resource) {
+	private void populateFragment(View rootView, ArrayList<String[]> resource) {
 		// Build Adapter
-		ArrayAdapter<String[]> adapter = new MyListAdapter(resource);
+		ArrayAdapter<String[]> adapter = new CounterListStatisticsAdapter(this, resource);
 		
 		// Get the list view
 		ListView list = (ListView) rootView.findViewById(R.id.fragmentListView);
 		
 		// Set the adapter
 		list.setAdapter(adapter);
-		
-		return rootView;
-	}
-	
-	private class MyListAdapter extends ArrayAdapter<String[]> {
-		public MyListAdapter(ArrayList<String[]> statsArray) {
-			super(getActivity(), R.layout.fragment_counter_list_stats_cell, statsArray);
-			// TODO Auto-generated constructor stub
-		}
-
-		@Override
-		public View getView(int position, View convertView, ViewGroup parent) {
-			// Make sure we have a view to work with (may have been null)
-			View itemView = convertView;
-			
-			if (itemView == null) {
-				itemView = getActivity().getLayoutInflater().inflate(R.layout.fragment_counter_list_stats_cell, parent, false);
-			}
-			
-			String theStat[] = this.getItem(position);
-			
-			TextView theDateView = (TextView) itemView.findViewById(R.id.dateField);
-			theDateView.setText(theStat[0]);
-			
-			TextView theCount = (TextView) itemView.findViewById(R.id.countField);
-			theCount.setText(theStat[1]);
-
-			return itemView;
-		}
-		
 	}
 }

@@ -2,6 +2,10 @@ package com.wyattjohnson.wyatt_notes;
 
 import java.util.ArrayList;
 
+/**
+ * @author wyatt
+ *
+ */
 public interface CounterListInterface {
 	public Counter addCounter(String aName);
 	public Counter getCounter(int index);
