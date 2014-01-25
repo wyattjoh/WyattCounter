@@ -3,7 +3,9 @@ package com.wyattjohnson.wyatt_notes;
 import java.util.Locale;
 
 import android.app.ActionBar;
+import android.app.AlertDialog;
 import android.app.FragmentTransaction;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -11,11 +13,16 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.app.NavUtils;
 import android.support.v4.view.ViewPager;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 public class CounterListStatisticsActivity extends FragmentActivity implements
 		ActionBar.TabListener {
+	private CounterListController counterListController;
+	private Counter selectedCounter;
+	private CounterStats counterStats;
 	
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -74,6 +81,14 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 					.setTabListener(this));
 		}
 	}
+	
+	public CounterStats getStats() {
+		return this.counterStats;
+	}
+	
+	public Counter getSelectedCounter() {
+		return this.selectedCounter;
+	}
 
 	/* (non-Javadoc)
 	 * @see android.support.v4.app.FragmentActivity#onResume()
@@ -83,7 +98,14 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 		// TODO Auto-generated method stub
 		super.onResume();
 		
-
+		// Create the controller
+		this.counterListController = CounterListController.shared(getApplicationContext());
+		
+		// Get the currently selected Counter
+		this.selectedCounter = counterListController.getSelectedCounter();
+		
+		// Get the currently selected Counter's Stats
+		this.counterStats = new CounterStats(selectedCounter);
 	}
 
 	@Override
@@ -91,6 +113,43 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.counter_list_stats, menu);
 		return true;
+	}
+	
+	private void getRenameCounterDialog() {
+		// From the Android Documentation: http://developer.android.com/guide/topics/ui/dialogs.html
+		
+		// Generate a alert dialog builder
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		
+		// Get the layout inflater
+	    LayoutInflater inflater = this.getLayoutInflater();
+	    
+		// Setup view and chain together various setter methods to set the dialog characteristics
+		builder.setView(inflater.inflate(R.layout.action_add_new_counter, null))
+			.setNegativeButton("Cancel", null)
+			.setPositiveButton("Rename Counter", new DialogInterface.OnClickListener() {
+               @Override
+               public void onClick(DialogInterface dialog, int id) {
+                   // Get the edit box
+            	   // http://stackoverflow.com/questions/9771228/android-dialoginterface-get-inner-dialog-views
+            	   EditText edit = (EditText) ((AlertDialog) dialog).findViewById(R.id.addCounterTextField);
+            	   
+            	   // Extract the counter name
+            	   String counterName = edit.getText().toString();
+
+            	   // Update the name
+            	   selectedCounter.setName(counterName);
+            	   
+            	   // Finish the activity
+            	   finish();
+               }
+	        });
+
+		// Get the AlertDialog from create()
+		AlertDialog dialog = builder.create();
+		
+		// Show it
+		dialog.show();
 	}
 
 	@Override
@@ -107,12 +166,29 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 			NavUtils.navigateUpFromSameTask(this);
 			return true;
 		case R.id.action_reset:
-			System.out.println("Got reset task");
+			
+			// Reset the counter
+			selectedCounter.reset();
+			
+			// End the current detail activity
 			finish();
+			
+			// We handled the menu call
 			return true;
 		case R.id.action_delete:
-			System.out.println("Got delete task");
+			// Remove the selected counter
+			this.counterListController.removeSelectedCounter();
+			
+			// End the current detail activity
 			finish();
+			
+			// We handled the menu call
+			return true;
+		case R.id.action_rename:
+			// Pop-up for renaming the counter
+			getRenameCounterDialog();
+			
+			// We handled the menu call
 			return true;
 		}
 		return super.onOptionsItemSelected(item);

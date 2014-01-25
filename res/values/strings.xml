@@ -14,5 +14,8 @@
     <string name="theCounterCount">Counter Count</string>
     <string name="resetTitle">Reset Counter</string>
     <string name="deleteTitle">Delete Counter</string>
-
+    <string name="action_rename">Rename Counter</string>
+	<string name="incrementCounter">Increment Counter</string>
+	<string name="counterDetails">Counter Details</string>
+    
 </resources>

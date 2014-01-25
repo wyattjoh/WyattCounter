@@ -4,13 +4,10 @@
 package com.wyattjohnson.wyatt_notes;
 
 import java.io.Serializable;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
-import android.annotation.SuppressLint;
-import android.util.LongSparseArray;
 
 /**
  * @author wyatt

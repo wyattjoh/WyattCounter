@@ -5,9 +5,7 @@ import java.util.ArrayList;
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.NavUtils;
 import android.view.LayoutInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -20,15 +18,7 @@ import android.widget.TextView;
  */
 @SuppressLint("ValidFragment")
 public class CounterListStatisticsFragment extends Fragment {
-	private CounterListController counterListController;
-	private Counter selectedCounter;
-	private CounterStats counterStats;
-	
-	private ArrayList<String[]> hourlyStats;
-	private ArrayList<String[]> dailyStats;
-	private ArrayList<String[]> weeklyStats;
-	private ArrayList<String[]> monthlyStats;
-	
+
 	/**
 	 * The fragment argument representing the section number for this
 	 * fragment.
@@ -39,33 +29,28 @@ public class CounterListStatisticsFragment extends Fragment {
 		
 	}
 	
+	private CounterListStatisticsActivity currentActivity() {
+		return (CounterListStatisticsActivity)getActivity();
+	}
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View rootView = inflater.inflate(R.layout.fragment_counter_list_stats, container, false);
-		
-		// Create the controller
-		this.counterListController = CounterListController.shared(getActivity().getApplicationContext());
-		
-		// Get the currently selected Counter
-		this.selectedCounter = counterListController.getSelectedCounter();
-		
-		// Get the currently selected Counter's Stats
-		this.counterStats = new CounterStats(selectedCounter);
-		
+				
 		// Set name
-		getActivity().setTitle(this.selectedCounter.getName() + " Stats");
+		getActivity().setTitle(currentActivity().getSelectedCounter().getName() + " Stats");
 		
 		int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
 		
 		switch (sectionNumber) {
 			case 1:
-				return setupSummaryView(rootView, this.counterStats.getHourlyStats());
+				return setupSummaryView(rootView, currentActivity().getStats().getHourlyStats());
 			case 2:
-				return setupSummaryView(rootView, this.counterStats.getDailyStats());
+				return setupSummaryView(rootView, currentActivity().getStats().getDailyStats());
 			case 3:
-				return setupSummaryView(rootView, this.counterStats.getWeeklyStats());
+				return setupSummaryView(rootView, currentActivity().getStats().getWeeklyStats());
 			case 4:
-				return setupSummaryView(rootView, this.counterStats.getMonthlyStats());
+				return setupSummaryView(rootView, currentActivity().getStats().getMonthlyStats());
 		}
 		
 		// Should never happen

@@ -58,10 +58,6 @@ public class CounterList implements CounterListInterface {
 		return theCounter;
 	}
 	
-	public void removeCounter(int index) {
-		this.counterModels.remove(index);
-	}
-	
 	private void save() {
 		try {
 			FileOutputStream fileOut = context.openFileOutput(CounterList.DATABASEFILE, Context.MODE_PRIVATE);

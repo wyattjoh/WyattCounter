@@ -15,8 +15,8 @@ public class CounterListController implements CounterListInterface {
 	private static CounterListController singleton = null;
 	
 	private CounterList counterList = null;
-//	private Context context;
-	private Counter selectedCounter;
+	private Counter selectedCounter = null;
+	private int selectedCounterIndex;
 	
 	public static CounterListController shared(Context context) {
 		if (CounterListController.singleton == null) {
@@ -32,21 +32,22 @@ public class CounterListController implements CounterListInterface {
 	}
 	
 	public void setSelectedCounterForIndex(int index) {
+		this.selectedCounterIndex = index;
 		this.selectedCounter = this.getCounter(index);
 	}
 	
 	public Counter getSelectedCounter() {
 		return this.selectedCounter;
 	}
+	
+	public void removeSelectedCounter() {
+		deleteCounterAtIndex(selectedCounterIndex);
+		selectedCounterIndex = -1;		
+	}
 
 	public Counter addCounter(String aName) {
 		// TODO Auto-generated method stub
 		return this.counterList.addCounter(aName);
-	}
-
-	public void removeCounter(int index) {
-		// TODO Auto-generated method stub
-		this.counterList.removeCounter(index);
 	}
 
 	public Counter getCounter(int index) {
@@ -76,6 +77,11 @@ public class CounterListController implements CounterListInterface {
 
 	@Override
 	public void deleteCounterAtIndex(int index) {
+		if (index < 0) { 
+			// No counter selected
+			return;
+		}
+
 		counterList.deleteCounterAtIndex(index);
 	}
 

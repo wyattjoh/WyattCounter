@@ -6,45 +6,57 @@
     android:paddingBottom="10dp"
     android:paddingTop="10dp" >
 
+    <ImageButton
+        android:id="@+id/detailsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:layout_alignParentRight="true"
+        android:contentDescription="@string/counterDetails"
+        android:minHeight="70dp"
+        android:onClick="detailsButton"
+        android:src="@drawable/ic_action_next_item" />
+
     <LinearLayout
         android:id="@+id/counterIncrementArea"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_toLeftOf="@+id/detailsButton"
         android:clickable="true"
-        android:orientation="vertical" >
+        android:layout_toLeftOf="@+id/detailsButton" >
 
-        <TextView
-            android:id="@+id/counterTitle"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="@string/theCounterTitle"
-            android:textAllCaps="true"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="#4492C2" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.82"
+            android:contentDescription="@string/incrementCounter"
+            android:scaleType="center"
+            android:src="@drawable/ic_action_new_dark" />
 
-        <TextView
-            android:id="@+id/counterCount"
-            android:layout_width="match_parent"
-            android:layout_height="20dp"
-            android:gravity="center"
-            android:textAllCaps="true"
-            android:text="@string/theCounterCount"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/counterTitle"
+                android:layout_width="203dp"
+                android:layout_height="50dp"
+                android:gravity="center|left"
+                android:text="@string/theCounterTitle"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#4492C2" />
+
+            <TextView
+                android:id="@+id/counterCount"
+                android:layout_width="206dp"
+                android:layout_height="20dp"
+                android:gravity="center|left"
+                android:text="@string/theCounterCount"
+                android:textAllCaps="true"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+        </LinearLayout>
     </LinearLayout>
-
-    <ImageButton
-        android:id="@+id/detailsButton"
-        android:layout_width="wrap_content"
-        android:layout_height="70dp"
-        android:layout_alignBottom="@+id/counterIncrementArea"
-        android:layout_alignParentRight="true"
-        android:contentDescription="Counter Details"
-        android:minHeight="70dp"
-        android:onClick="detailsButton"
-        android:src="@drawable/ic_action_next_item" />
 
 </RelativeLayout>
