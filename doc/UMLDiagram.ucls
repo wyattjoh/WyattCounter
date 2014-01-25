@@ -42,7 +42,7 @@
   <class id="5" language="java" name="com.wyattjohnson.wyatt_notes.CounterListController" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="211" y="440"/>    
+    <position height="-1" width="-1" x="202" y="439"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -107,47 +107,52 @@
     </display>  
   </class>  
   <association id="12">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="13" name="counterStats"/>      
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="13" name="counterList"/>      
       <multiplicity id="14" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
+    <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="15">    
     <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="16" name="mSectionsPagerAdapter"/>      
+      <attribute id="16" name="counterListController"/>      
       <multiplicity id="17" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
+    <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="18">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="19" name="counterListStatisticsFragment"/>      
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="19" name="counterListStatisticsActivity"/>      
       <multiplicity id="20" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="3" navigable="true"/>    
+    <end type="TARGET" refId="6" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="21">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="22" name="singleton"/>      
+    <bendpoint x="484" y="-27"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="22" name="counterListController">        
+        <position height="16" width="102" x="193" y="225"/>      
+      </attribute>      
       <multiplicity id="23" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="24">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="25" name="counterListStatisticsActivity"/>      
-      <multiplicity id="26" minimum="0" maximum="1"/>    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="25" name="counterModels">        
+        <position height="16" width="75" x="436" y="969"/>      
+      </attribute>      
+      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="27">    
-    <end type="SOURCE" refId="6" navigable="false">      
+    <end type="SOURCE" refId="2" navigable="false">      
       <attribute id="28" name="counterListController"/>      
       <multiplicity id="29" minimum="0" maximum="1"/>    
     </end>    
@@ -155,26 +160,21 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="30">    
-    <bendpoint x="580" y="649"/>    
-    <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="31" name="theCounter">        
-        <position height="16" width="59" x="628" y="912"/>      
-      </attribute>      
-      <multiplicity id="32" minimum="0" maximum="1">        
-        <position height="14" width="23" x="602" y="958"/>      
-      </multiplicity>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="31" name="counterListStatisticsFragment"/>      
+      <multiplicity id="32" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
+    <end type="TARGET" refId="3" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="33">    
-    <bendpoint x="559" y="649"/>    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="34" name="selectedCounter">        
-        <position height="16" width="83" x="529" y="883"/>      
+    <bendpoint x="580" y="649"/>    
+    <end type="SOURCE" refId="8" navigable="false">      
+      <attribute id="34" name="theCounter">        
+        <position height="16" width="59" x="628" y="912"/>      
       </attribute>      
       <multiplicity id="35" minimum="0" maximum="1">        
-        <position height="14" width="23" x="642" y="952"/>      
+        <position height="14" width="23" x="602" y="958"/>      
       </multiplicity>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
@@ -182,70 +182,70 @@
   </association>  
   <association id="36">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="37" name="counterList"/>      
+      <attribute id="37" name="singleton"/>      
       <multiplicity id="38" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="39">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <association id="40">    
-    <bendpoint x="993" y="288"/>    
-    <bendpoint x="993" y="649"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="41" name="selectedCounter">        
-        <position height="16" width="83" x="773" y="954"/>      
-      </attribute>      
-      <multiplicity id="42" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="43">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="44" name="counterListController"/>      
-      <multiplicity id="45" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="5" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="46">    
+  <association id="39">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="40" name="counterStats"/>      
+      <multiplicity id="41" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="8" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="42">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="43" name="mSectionsPagerAdapter"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="45">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="47" name="counterListActivity"/>      
-      <multiplicity id="48" minimum="0" maximum="1"/>    
+      <attribute id="46" name="counterListActivity"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="49">    
+  <realization id="48">    
     <bendpoint x="315" y="649"/>    
     <end type="SOURCE" refId="5"/>    
     <end type="TARGET" refId="4"/>  
   </realization>  
-  <association id="50">    
-    <bendpoint x="484" y="-27"/>    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="51" name="counterListController">        
-        <position height="16" width="102" x="202" y="226"/>      
+  <association id="49">    
+    <bendpoint x="559" y="649"/>    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="50" name="selectedCounter">        
+        <position height="16" width="83" x="529" y="883"/>      
       </attribute>      
-      <multiplicity id="52" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="53">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="54" name="counterModels">        
-        <position height="16" width="75" x="436" y="969"/>      
-      </attribute>      
-      <multiplicity id="55" minimum="0" maximum="2147483647"/>    
+      <multiplicity id="51" minimum="0" maximum="1">        
+        <position height="14" width="23" x="642" y="952"/>      
+      </multiplicity>    
     </end>    
     <end type="TARGET" refId="11" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
+  <association id="52">    
+    <bendpoint x="993" y="288"/>    
+    <bendpoint x="993" y="649"/>    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="53" name="selectedCounter">        
+        <position height="16" width="83" x="773" y="954"/>      
+      </attribute>      
+      <multiplicity id="54" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="55">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="4"/>  
+  </realization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
