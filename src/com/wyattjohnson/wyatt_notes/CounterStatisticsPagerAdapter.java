@@ -6,7 +6,6 @@ package com.wyattjohnson.wyatt_notes;
 import java.util.Locale;
 
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
@@ -14,14 +13,15 @@ import android.support.v4.app.FragmentPagerAdapter;
  * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
  * one of the sections/tabs/pages.
  */
-public class SectionsPagerAdapter extends FragmentPagerAdapter {
+public class CounterStatisticsPagerAdapter extends FragmentPagerAdapter {
+	private CounterStatisticsFragment fragment;
 
 	/**
 	 * 
 	 */
-	private final CounterListStatisticsActivity counterListStatisticsActivity;
+	private final CounterStatisticsActivity counterListStatisticsActivity;
 
-	public SectionsPagerAdapter(CounterListStatisticsActivity counterListStatisticsActivity, FragmentManager fm) {
+	public CounterStatisticsPagerAdapter(CounterStatisticsActivity counterListStatisticsActivity, FragmentManager fm) {
 		super(fm);
 		this.counterListStatisticsActivity = counterListStatisticsActivity;
 	}
@@ -33,13 +33,13 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 	}
 
 	@Override
-	public Fragment getItem(int position) {
+	public CounterStatisticsFragment getItem(int position) {
 		// getItem is called to instantiate the fragment for the given page.
 		// Return a DummySectionFragment (defined as a static inner class
 		// below) with the page number as its lone argument.
-		Fragment fragment = new CounterListStatisticsFragment();
+		fragment = new CounterStatisticsFragment();
 		Bundle args = new Bundle();
-		args.putInt(CounterListStatisticsFragment.ARG_SECTION_NUMBER, position + 1);
+		args.putInt(CounterStatisticsFragment.ARG_SECTION_NUMBER, position + 1);
 		fragment.setArguments(args);
 		return fragment;
 	}

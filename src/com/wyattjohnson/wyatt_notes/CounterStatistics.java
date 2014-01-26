@@ -7,7 +7,14 @@ import java.util.Date;
 import android.annotation.SuppressLint;
 import android.util.LongSparseArray;
 
-public class CounterStats {
+/**
+ * @author wyatt
+ * 
+ * Responsible for generating statistics data from
+ * a counter
+ *
+ */
+public class CounterStatistics {
 	private Counter theCounter;
 
 	private ArrayList<String[]> hourlyStats;
@@ -15,7 +22,7 @@ public class CounterStats {
 	private ArrayList<String[]> weeklyStats;
 	private ArrayList<String[]> monthlyStats;
 
-	public CounterStats(Counter theCounter) {
+	public CounterStatistics(Counter theCounter) {
 		this.theCounter = theCounter;
 		
 		// Generate the stats
@@ -48,6 +55,12 @@ public class CounterStats {
 		return arrayListStats;
 	}
 	
+	/**
+	 * 
+	 * Generates statistics via binning in SparseArray's and
+	 * formamtting into string arrays
+	 * 
+	 */
 	private void generateStats() {
 		LongSparseArray<Integer> hourlySparseArray = new LongSparseArray<Integer>();
 		LongSparseArray<Integer> dailySparseArray = new LongSparseArray<Integer>();

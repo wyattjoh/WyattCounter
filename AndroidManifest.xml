@@ -31,7 +31,7 @@
                 android:value="com.wyattjohnson.wyatt_notes.CounterListActivity" />
         </activity>
         <activity
-            android:name="com.wyattjohnson.wyatt_notes.CounterListStatisticsActivity"
+            android:name="com.wyattjohnson.wyatt_notes.CounterStatisticsActivity"
             android:label="@string/title_activity_counter_list_stats"
             android:parentActivityName="com.wyattjohnson.wyatt_notes.CounterListActivity" >
             <meta-data

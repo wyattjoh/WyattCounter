@@ -3,15 +3,16 @@
  */
 package com.wyattjohnson.wyatt_notes;
 
-import java.util.ArrayList;
-
 import android.content.Context;
 
 /**
  * @author wyatt
  *
+ * Responsible for handling the counter list and selected items
+ * as well as managing the global data state
+ *
  */
-public class CounterListController implements CounterListInterface {
+public class CounterListController extends CounterList {
 	private static CounterListController singleton = null;
 	
 	public static CounterListController shared(Context context) {
@@ -20,70 +21,31 @@ public class CounterListController implements CounterListInterface {
 		}
 		return CounterListController.singleton;
 	}
-	private CounterList counterList = null;
+
 	private Counter selectedCounter = null;
-	
 	private int selectedCounterIndex = -1;
 	
 	private CounterListController(Context context) {
-		super();
-		this.counterList = new CounterList(context);
+		super(context);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#addCounter(java.lang.String)
+	/**
+	 * Resets the selected counter
 	 */
-	@Override
-	public Counter addCounter(String aName) {
-		return this.counterList.addCounter(aName);
+	public void resetSelectedCounter() {
+		if (selectedCounterIndex < 0) { 
+			// No counter selected
+			return;
+		}
+		
+		resetCounterAtIndex(selectedCounterIndex);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#deleteCounterAtIndex(int)
-	 */
-	@Override
-	public void deleteCounterAtIndex(int index) {
-		counterList.deleteCounterAtIndex(index);
-	}
-	
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#getCounter(int)
-	 */
-	@Override
-	public Counter getCounter(int index) {
-		// TODO Auto-generated method stub
-		return this.counterList.getCounter(index);
-	}
-
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#getList()
-	 */
-	@Override
-	public ArrayList<Counter> getList() {
-		return counterList.getList();
-	}
-
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#getListSize()
-	 */
-	@Override
-	public int getListSize() {
-		return counterList.getListSize();
-	}
-
 	/**
 	 * @return the currently selected counter
 	 */
 	public Counter getSelectedCounter() {
 		return this.selectedCounter;
-	}
-
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#incrementCounterAtIndex(int)
-	 */
-	@Override
-	public void incrementCounterAtIndex(int index) {
-		counterList.incrementCounterAtIndex(index);
 	}
 
 	/**
@@ -99,27 +61,11 @@ public class CounterListController implements CounterListInterface {
 		selectedCounterIndex = -1;		
 	}
 
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#resetCounterAtIndex(int)
-	 */
-	@Override
-	public void resetCounterAtIndex(int index) {
-		counterList.resetCounterAtIndex(index);
-	}
-
 	/**
 	 * @param index
 	 */
 	public void setSelectedCounterForIndex(int index) {
 		this.selectedCounterIndex = index;
-		this.selectedCounter = this.getCounter(index);
-	}
-
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#sortList()
-	 */
-	@Override
-	public void sortList() {
-		counterList.sortList();
+		this.selectedCounter = this.getCounterAtIndex(index);
 	}
 }

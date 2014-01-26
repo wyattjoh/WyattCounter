@@ -11,6 +11,12 @@ import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * @author wyatt
+ *
+ * Responsible for managing the list of counters from CounterList
+ *
+ */
 class CounterListAdapter extends ArrayAdapter<Counter> {
 	/**
 	 * @author wyatt
@@ -70,7 +76,7 @@ class CounterListAdapter extends ArrayAdapter<Counter> {
 	 */
 	private void populateView(View itemView, int position) {
 		// Find the Counter to work with
-		Counter currentCounter = counterListController.getCounter(position);
+		Counter currentCounter = counterListController.getCounterAtIndex(position);
 		
 		// Fill the view
 		TextView titleText = (TextView) itemView.findViewById(R.id.counterTitle);

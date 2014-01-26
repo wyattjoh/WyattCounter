@@ -2,7 +2,6 @@ package com.wyattjohnson.wyatt_notes;
 
 import java.util.ArrayList;
 
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -17,7 +16,7 @@ import android.widget.ListView;
  * displays dummy text.
  */
 @SuppressLint("ValidFragment")
-public class CounterListStatisticsFragment extends Fragment {
+public class CounterStatisticsFragment extends Fragment {
 
 	/**
 	 * The fragment argument representing the section number for this
@@ -28,8 +27,8 @@ public class CounterListStatisticsFragment extends Fragment {
 	/**
 	 * @return the current activity as a CounterListStatisticsActivity
 	 */
-	private CounterListStatisticsActivity currentActivity() {
-		return (CounterListStatisticsActivity)getActivity();
+	private CounterStatisticsActivity currentActivity() {
+		return (CounterStatisticsActivity)getActivity();
 	}
 	
 	@Override
@@ -37,23 +36,28 @@ public class CounterListStatisticsFragment extends Fragment {
 		View rootView = inflater.inflate(R.layout.fragment_counter_list_stats, container, false);
 				
 		// Set name
-		getActivity().setTitle(currentActivity().getSelectedCounter().getName() + " Stats");
+		final CounterListController counterListController = CounterListController.shared(currentActivity().getApplicationContext());
+
+		// Get the currently selected Counter's Stats
+		final CounterStatistics counterStats = new CounterStatistics(counterListController.getSelectedCounter());
+		
+		getActivity().setTitle(counterListController.getSelectedCounter().getName() + " Stats");
 		
 		int sectionNumber = getArguments().getInt(ARG_SECTION_NUMBER);
 		
 		// Get the right fragment data
 		switch (sectionNumber) {
 			case 1:
-				populateFragment(rootView, currentActivity().getStats().getHourlyStats());
+				populateFragment(rootView, counterStats.getHourlyStats());
 				break;
 			case 2:
-				populateFragment(rootView, currentActivity().getStats().getDailyStats());
+				populateFragment(rootView, counterStats.getDailyStats());
 				break;
 			case 3:
-				populateFragment(rootView, currentActivity().getStats().getWeeklyStats());
+				populateFragment(rootView, counterStats.getWeeklyStats());
 				break;
 			case 4:
-				populateFragment(rootView, currentActivity().getStats().getMonthlyStats());
+				populateFragment(rootView, counterStats.getMonthlyStats());
 				break;
 		}
 		
@@ -63,7 +67,7 @@ public class CounterListStatisticsFragment extends Fragment {
 	
 	private void populateFragment(View rootView, ArrayList<String[]> resource) {
 		// Build Adapter
-		ArrayAdapter<String[]> adapter = new CounterListStatisticsAdapter(this, resource);
+		ArrayAdapter<String[]> adapter = new CounterStatisticsAdapter(this, resource);
 		
 		// Get the list view
 		ListView list = (ListView) rootView.findViewById(R.id.fragmentListView);

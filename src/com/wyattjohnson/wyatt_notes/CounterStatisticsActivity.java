@@ -14,12 +14,9 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 
-public class CounterListStatisticsActivity extends FragmentActivity implements
+public class CounterStatisticsActivity extends FragmentActivity implements
 		ActionBar.TabListener {
 	private CounterListController counterListController;
-	private Counter selectedCounter;
-	
-	private CounterStats counterStats;
 
 	/**
 	 * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -29,7 +26,7 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 	 * intensive, it may be best to switch to a
 	 * {@link android.support.v4.app.FragmentStatePagerAdapter}.
 	 */
-	SectionsPagerAdapter mSectionsPagerAdapter;
+	CounterStatisticsPagerAdapter counterListStatisticsPagerAdapter;
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
@@ -59,7 +56,7 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
             	   String counterName = edit.getText().toString();
 
             	   // Update the name
-            	   selectedCounter.setName(counterName);
+            	   counterListController.getSelectedCounter().setName(counterName);
             	   
             	   // Finish the activity
             	   finish();
@@ -71,20 +68,6 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 		
 		// Show it
 		dialog.show();
-	}
-	
-	/**
-	 * @return currently selected counter
-	 */
-	public Counter getSelectedCounter() {
-		return this.selectedCounter;
-	}
-
-	/**
-	 * @return currently generated statistics
-	 */
-	public CounterStats getStats() {
-		return this.counterStats;
 	}
 
 	@Override
@@ -100,12 +83,12 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 
 		// Create the adapter that will return a fragment for each of the three
 		// primary sections of the app.
-		mSectionsPagerAdapter = new SectionsPagerAdapter(
+		counterListStatisticsPagerAdapter = new CounterStatisticsPagerAdapter(
 				this, getSupportFragmentManager());
 
 		// Set up the ViewPager with the sections adapter.
 		mViewPager = (ViewPager) findViewById(R.id.pager);
-		mViewPager.setAdapter(mSectionsPagerAdapter);
+		mViewPager.setAdapter(counterListStatisticsPagerAdapter);
 
 		// When swiping between different sections, select the corresponding
 		// tab. We can also use ActionBar.Tab#select() to do this if we have
@@ -119,13 +102,13 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 				});
 
 		// For each of the sections in the app, add a tab to the action bar.
-		for (int i = 0; i < mSectionsPagerAdapter.getCount(); i++) {
+		for (int i = 0; i < counterListStatisticsPagerAdapter.getCount(); i++) {
 			// Create a tab with text corresponding to the page title defined by
 			// the adapter. Also specify this Activity object, which implements
 			// the TabListener interface, as the callback (listener) for when
 			// this tab is selected.
 			actionBar.addTab(actionBar.newTab()
-					.setText(mSectionsPagerAdapter.getPageTitle(i))
+					.setText(counterListStatisticsPagerAdapter.getPageTitle(i))
 					.setTabListener(this));
 		}
 	}
@@ -153,7 +136,7 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 		case R.id.action_reset:
 			
 			// Reset the counter
-			selectedCounter.resetCounts();
+			this.counterListController.resetSelectedCounter();
 			
 			// End the current detail activity
 			finish();
@@ -189,12 +172,6 @@ public class CounterListStatisticsActivity extends FragmentActivity implements
 		
 		// Create the controller
 		this.counterListController = CounterListController.shared(getApplicationContext());
-		
-		// Get the currently selected Counter
-		this.selectedCounter = counterListController.getSelectedCounter();
-		
-		// Get the currently selected Counter's Stats
-		this.counterStats = new CounterStats(selectedCounter);
 	}
 
 	@Override

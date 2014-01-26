@@ -14,10 +14,17 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 
+/**
+ * @author wyatt
+ *
+ * Responsible for displaying a list of counters that can be
+ * incremented via clicking in the active area, or access
+ * detailed information via the right hand side button.
+ *
+ */
 public class CounterListActivity extends Activity {
 	private CounterListController counterListController;
 	private ArrayAdapter<Counter> counterListAdapter;
-	
 	
 	/**
 	 * 
@@ -83,7 +90,7 @@ public class CounterListActivity extends Activity {
 		counterListController.setSelectedCounterForIndex(position.intValue());
 		
 		// Create an intent to start a new activity
-		Intent intent = new Intent(CounterListActivity.this, CounterListStatisticsActivity.class);
+		Intent intent = new Intent(CounterListActivity.this, CounterStatisticsActivity.class);
 		
 		// Start the intent
 		startActivity(intent);

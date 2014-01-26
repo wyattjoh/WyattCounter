@@ -1,255 +1,216 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.4" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
-  realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
+  realizations="true" associations="true" dependencies="false" nesting-relationships="false">  
   <class id="1" language="java" name="com.wyattjohnson.wyatt_notes.CounterListAdapter" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListAdapter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="113" width="307" x="224" y="-198"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="138" y="330"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
   <class id="2" language="java" name="com.wyattjohnson.wyatt_notes.CounterListActivity" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListActivity.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="221" width="230" x="224" y="-27"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="137" y="519"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="com.wyattjohnson.wyatt_notes.CounterListStatisticsFragment" 
-    project="WyattsCounter" file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListStatisticsFragment.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="149" width="276" x="962" y="-27"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="4" language="java" name="com.wyattjohnson.wyatt_notes.CounterListInterface" project="WyattsCounter" 
-    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListInterface.java" binary="false" 
+  <class id="3" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatisticsFragment" project="WyattsCounter" 
+    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsFragment.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="163" y="757"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="771" y="71"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
-  </interface>  
-  <class id="5" language="java" name="com.wyattjohnson.wyatt_notes.CounterListController" project="WyattsCounter" 
+  </class>  
+  <class id="4" language="java" name="com.wyattjohnson.wyatt_notes.CounterListController" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="202" y="439"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="482" y="519"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="com.wyattjohnson.wyatt_notes.CounterListStatisticsActivity" 
-    project="WyattsCounter" file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListStatisticsActivity.java" 
+  <class id="5" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatisticsActivity" project="WyattsCounter" 
+    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsActivity.java" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="480" y="272"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="6" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatisticsPagerAdapter" 
+    project="WyattsCounter" file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsPagerAdapter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="275" width="255" x="571" y="-27"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="478" y="70"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.wyattjohnson.wyatt_notes.SectionsPagerAdapter" project="WyattsCounter" 
-    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/SectionsPagerAdapter.java" binary="false" 
+  <class id="7" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatistics" project="WyattsCounter" 
+    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatistics.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="249" y="782"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+      visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
+    </display>  
+  </class>  
+  <class id="8" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatisticsAdapter" project="WyattsCounter" 
+    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsAdapter.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="131" width="351" x="571" y="-198"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="770" y="214"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.wyattjohnson.wyatt_notes.CounterStats" project="WyattsCounter" 
-    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStats.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="275" width="392" x="571" y="288"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="9" language="java" name="com.wyattjohnson.wyatt_notes.CounterListStatisticsAdapter" project="WyattsCounter" 
-    file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListStatisticsAdapter.java" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="113" width="389" x="962" y="-198"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
-      visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <class id="10" language="java" name="com.wyattjohnson.wyatt_notes.CounterList" project="WyattsCounter" 
+  <class id="9" language="java" name="com.wyattjohnson.wyatt_notes.CounterList" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterList.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="293" width="183" x="346" y="649"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="778" y="517"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="com.wyattjohnson.wyatt_notes.Counter" project="WyattsCounter" 
+  <class id="10" language="java" name="com.wyattjohnson.wyatt_notes.Counter" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/Counter.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="239" width="175" x="571" y="982"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" accessors="true" 
+    <position height="-1" width="-1" x="482" y="782"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+      <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
-  <association id="12">    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="13" name="counterList"/>      
-      <multiplicity id="14" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="10" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="15">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="16" name="counterListController"/>      
-      <multiplicity id="17" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="18">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="19" name="counterListStatisticsActivity"/>      
-      <multiplicity id="20" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="21">    
-    <bendpoint x="484" y="-27"/>    
+  <association id="11">    
     <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="22" name="counterListController">        
-        <position height="16" width="102" x="193" y="225"/>      
-      </attribute>      
-      <multiplicity id="23" minimum="0" maximum="1"/>    
+      <attribute id="12" name="counterListActivity"/>      
+      <multiplicity id="13" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="24">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="25" name="counterModels">        
-        <position height="16" width="75" x="436" y="969"/>      
-      </attribute>      
-      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="27">    
-    <end type="SOURCE" refId="2" navigable="false">      
-      <attribute id="28" name="counterListController"/>      
-      <multiplicity id="29" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="30">    
-    <end type="SOURCE" refId="9" navigable="false">      
-      <attribute id="31" name="counterListStatisticsFragment"/>      
-      <multiplicity id="32" minimum="0" maximum="1"/>    
+  <association id="14">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="15" name="fragment"/>      
+      <multiplicity id="16" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="3" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="33">    
-    <bendpoint x="580" y="649"/>    
+  <association id="17">    
     <end type="SOURCE" refId="8" navigable="false">      
-      <attribute id="34" name="theCounter">        
-        <position height="16" width="59" x="628" y="912"/>      
-      </attribute>      
-      <multiplicity id="35" minimum="0" maximum="1">        
-        <position height="14" width="23" x="602" y="958"/>      
+      <attribute id="18" name="counterListStatisticsFragment"/>      
+      <multiplicity id="19" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="3" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <association id="20">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="21" name="counterListController"/>      
+      <multiplicity id="22" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <association id="23">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="24" name="counterListStatisticsActivity"/>      
+      <multiplicity id="25" minimum="0" maximum="1">        
+        <position height="16" width="25" x="425" y="148"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <association id="26">    
+    <bendpoint x="779" y="782"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="27" name="counterModels"/>      
+      <multiplicity id="28" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <association id="29">    
+    <bendpoint x="283" y="331"/>    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="30" name="counterListController"/>      
+      <multiplicity id="31" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <generalization id="32">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="9"/>  
+  </generalization>  
+  <association id="33">    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="34" name="selectedCounter"/>      
+      <multiplicity id="35" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
   </association>  
   <association id="36">    
     <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="37" name="singleton"/>      
+      <attribute id="37" name="counterListStatisticsPagerAdapter"/>      
       <multiplicity id="38" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
   </association>  
   <association id="39">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="40" name="counterStats"/>      
-      <multiplicity id="41" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="8" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="42">    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="43" name="mSectionsPagerAdapter"/>      
-      <multiplicity id="44" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <association id="45">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="46" name="counterListActivity"/>      
-      <multiplicity id="47" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="2" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <realization id="48">    
-    <bendpoint x="315" y="649"/>    
-    <end type="SOURCE" refId="5"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <association id="49">    
-    <bendpoint x="559" y="649"/>    
-    <end type="SOURCE" refId="5" navigable="false">      
-      <attribute id="50" name="selectedCounter">        
-        <position height="16" width="83" x="529" y="883"/>      
-      </attribute>      
-      <multiplicity id="51" minimum="0" maximum="1">        
-        <position height="14" width="23" x="642" y="952"/>      
+    <bendpoint x="569" y="615"/>    
+    <bendpoint x="605" y="615"/>    
+    <bendpoint x="605" y="584"/>    
+    <end type="SOURCE" refId="4" navigable="false">      
+      <attribute id="40" name="singleton"/>      
+      <multiplicity id="41" minimum="0" maximum="1">        
+        <position height="16" width="25" x="612" y="584"/>      
       </multiplicity>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
   </association>  
-  <association id="52">    
-    <bendpoint x="993" y="288"/>    
-    <bendpoint x="993" y="649"/>    
-    <end type="SOURCE" refId="6" navigable="false">      
-      <attribute id="53" name="selectedCounter">        
-        <position height="16" width="83" x="773" y="954"/>      
-      </attribute>      
-      <multiplicity id="54" minimum="0" maximum="1"/>    
+  <association id="42">    
+    <end type="SOURCE" refId="7" navigable="false">      
+      <attribute id="43" name="theCounter"/>      
+      <multiplicity id="44" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="11" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
   </association>  
-  <realization id="55">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+  <association id="45">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="46" name="counterListController">        
+        <position height="18" width="122" x="515" y="348"/>      
+      </attribute>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="false" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" 
     accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
-    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+    <operations public="true" package="true" protected="true" private="false" static="true"/>  
   </classifier-display>  
-  <association-display labels="true" multiplicity="true"/>
+  <association-display labels="false" multiplicity="true"/>
 </class-diagram>

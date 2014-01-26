@@ -11,13 +11,16 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-class CounterListStatisticsAdapter extends ArrayAdapter<String[]> {
-	/**
-	 * 
-	 */
-	private CounterListStatisticsFragment counterListStatisticsFragment;
+/**
+ * @author wyatt
+ * 
+ * Responsible for managing the list of CounterStatistics
+ *
+ */
+class CounterStatisticsAdapter extends ArrayAdapter<String[]> {
+	private CounterStatisticsFragment counterListStatisticsFragment;
 
-	public CounterListStatisticsAdapter(CounterListStatisticsFragment counterListStatisticsFragment, ArrayList<String[]> statsArray) {
+	public CounterStatisticsAdapter(CounterStatisticsFragment counterListStatisticsFragment, ArrayList<String[]> statsArray) {
 		super(counterListStatisticsFragment.getActivity(), R.layout.fragment_counter_list_stats_cell, statsArray);
 		// TODO Auto-generated constructor stub
 		this.counterListStatisticsFragment = counterListStatisticsFragment;

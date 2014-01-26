@@ -19,10 +19,11 @@ import android.content.Context;
 /**
  * @author wyatt
  *
- * Used to store and manage the list of Counters
+ * Used to store and manage the list of Counters. Responsible for saving and
+ * loading the data from the filesystem.
  *
  */
-public class CounterList implements CounterListInterface {
+public abstract class CounterList {
 	private static final String DATABASEFILE = "counters.save";
 	private ArrayList<Counter> counterModels;
 	private Context context;
@@ -33,11 +34,10 @@ public class CounterList implements CounterListInterface {
 		this.load();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#addCounter(java.lang.String)
+	/**
+	 * @param theName
+	 * @return the newly created counter
 	 */
-	@Override
 	public Counter addCounter(String theName) {
 		// Create a counter with the name
 		Counter theCounter = new Counter(theName, null);
@@ -52,67 +52,71 @@ public class CounterList implements CounterListInterface {
 		return theCounter;
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#deleteCounterAtIndex(int)
+	/**
+	 * 
+	 * Deletes a counter at a location in the array
+	 * 
+	 * @param index
 	 */
-	@Override
 	public void deleteCounterAtIndex(int index) {
 		this.counterModels.remove(index);
 		
 		this.save();
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#getCounter(int)
+	/**
+	 * @param index
+	 * @return the counter requested for index
 	 */
-	@Override
-	public Counter getCounter(int index) {
+	public Counter getCounterAtIndex(int index) {
 		return this.counterModels.get(index);
 	}
 	
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#getList()
+	/**
+	 * @return the list of counters
 	 */
-	@Override
 	public ArrayList<Counter> getList() {
 		return counterModels;
 	}
-	
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#getListSize()
+
+	/**
+	 * @return the size of the list
 	 */
-	@Override
 	public int getListSize() {
 		return counterModels.size();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#incrementCounterAtIndex(int)
+	/**
+	 * 
+	 * Increments the counter with index
+	 * 
+	 * @param index
 	 */
-	@Override
 	public void incrementCounterAtIndex(int index) {
-		Counter theCounter = getCounter(index);
+		Counter theCounter = getCounterAtIndex(index);
 		theCounter.addCount();
 		
 		this.save();
 	}
 
-	/* (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#resetCounterAtIndex(int)
+	/**
+	 * 
+	 * Resets the counter at index
+	 * 
+	 * @param index
 	 */
-	@Override
 	public void resetCounterAtIndex(int index) {
-		Counter theCounter = getCounter(index);
+		Counter theCounter = getCounterAtIndex(index);
 		theCounter.resetCounts();
 		
 		this.save();
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * @see com.wyattjohnson.wyatt_notes.CounterListInterface#sortList()
+	/**
+	 * 
+	 * Sorts the list according to the count
+	 * 
 	 */
-	@Override
 	public void sortList() {
 		Collections.sort(counterModels, new Comparator<Counter>() {
 			@Override
@@ -122,8 +126,10 @@ public class CounterList implements CounterListInterface {
 		});
 	}
 
-	/*
+	/**
+	 * 
 	 * Saves the current list of counters to disk
+	 * 
 	 */
 	private void save() {
 		try {
@@ -140,8 +146,10 @@ public class CounterList implements CounterListInterface {
 		}
 	}
 
-	/*
+	/**
+	 * 
 	 * Loads the list of counters from disk
+	 * 
 	 */
 	@SuppressWarnings("unchecked")
 	private void load() {
