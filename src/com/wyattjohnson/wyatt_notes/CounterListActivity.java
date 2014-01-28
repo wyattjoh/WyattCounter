@@ -107,6 +107,9 @@ public class CounterListActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_list);
 		
+		// Set the title
+		setTitle("Counter List");
+		
 		// Custom list view from: http://www.youtube.com/watch?v=WRANgDgM2Zg
 		populateListView();
 	}
@@ -133,9 +136,6 @@ public class CounterListActivity extends Activity {
 	@Override
 	protected void onResume() {
 		super.onResume();
-		
-		// Set the title
-		setTitle("Counter List");
 		
 		// Refresh the list
 		this.refreshList(true);
