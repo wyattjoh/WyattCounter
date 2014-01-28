@@ -47,7 +47,7 @@ public class CounterListActivity extends Activity {
 	    LayoutInflater inflater = this.getLayoutInflater();
 		
 	    // Setup view and chain together various setter methods to set the dialog characteristics
-		builder.setView(inflater.inflate(R.layout.action_add_new_counter, null))
+		builder.setView(inflater.inflate(R.layout.action_name_counter, null))
 			.setNegativeButton("Cancel", null)
 			.setPositiveButton("Add Counter", new DialogInterface.OnClickListener() {
                @Override
