@@ -8,9 +8,10 @@
 
     <ImageButton
         android:id="@+id/detailsButton"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="70dp"
         android:layout_alignParentRight="true"
+        android:background="@color/blue_color"
         android:contentDescription="@string/counterDetails"
         android:minHeight="70dp"
         android:onClick="detailsButton"
