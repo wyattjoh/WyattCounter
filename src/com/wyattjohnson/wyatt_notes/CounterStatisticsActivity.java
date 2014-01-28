@@ -15,6 +15,13 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * @author wyatt
+ * 
+ * Responsible for displaying a list of counters allowing users to sort, add new
+ * and increment from this activity window
+ *
+ */
 public class CounterStatisticsActivity extends FragmentActivity implements
 		ActionBar.TabListener {
 	private CounterListController counterListController;
