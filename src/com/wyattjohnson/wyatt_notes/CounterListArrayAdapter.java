@@ -8,7 +8,6 @@ import com.wyattjohnson.wyatt_notes.R;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
-import android.view.animation.BounceInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.view.animation.RotateAnimation;
 import android.widget.ArrayAdapter;
@@ -35,11 +34,11 @@ class CounterListArrayAdapter extends ArrayAdapter<Counter> {
 		public void onClick(View v) {
 			// http://stackoverflow.com/questions/2032304/android-imageview-animation
 			// http://stackoverflow.com/questions/3805622/drawable-rotating-around-its-center-android
-			RotateAnimation anim = new RotateAnimation(0.0f, 180.0f,
+			RotateAnimation anim = new RotateAnimation(0.0f, 90.0f,
 	                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
 	                0.5f);
-			anim.setInterpolator(new BounceInterpolator());
-			anim.setDuration(1000);
+			anim.setInterpolator(new LinearInterpolator());
+			anim.setDuration(250);
 
 			// Start animating the image
 			ImageView image_icon = (ImageView) v.findViewById(R.id.addCounterIcon);
