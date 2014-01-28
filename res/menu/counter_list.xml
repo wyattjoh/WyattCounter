@@ -11,8 +11,8 @@
     <item
         android:id="@+id/sortListAction"
         android:showAsAction="ifRoom"
-        android:icon="@drawable/ic_action_sort_by_size"
-        android:title="Sort List"
+        android:icon="@drawable/ic_action_refresh"
+        android:title="@string/sort_list"
         android:onClick="sortListAction"
         />
 
