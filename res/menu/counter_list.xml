@@ -7,5 +7,13 @@
         android:title="Add Counter"
         android:onClick="addCounterAction"
         />
+    
+    <item
+        android:id="@+id/sortListAction"
+        android:showAsAction="ifRoom"
+        android:icon="@drawable/ic_action_sort_by_size"
+        android:title="Sort List"
+        android:onClick="sortListAction"
+        />
 
 </menu>

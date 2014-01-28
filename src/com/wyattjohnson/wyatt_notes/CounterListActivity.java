@@ -82,6 +82,21 @@ public class CounterListActivity extends Activity {
 		// Say that we have been completed successfully
 		return true;
 	}
+	
+	
+	/**
+	 * 
+	 * Sorts the list on button press
+	 * 
+	 * @param item
+	 * @return
+	 */
+	public boolean sortListAction(MenuItem item) {
+		// Refresh the list
+		refreshList(true);
+		
+		return true;
+	}
 
 	/**
 	 * 
