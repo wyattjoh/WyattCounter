@@ -1,4 +1,6 @@
-WyattCounter
+![alt text](https://raw.github.com/Wyattjoh/WyattCounter/master/res/drawable-xhdpi/ic_launcher.png "Logo Title Text 1")
+
+Wyatt Counter (wyatt-notes)
 ============
 
 A counter application designed to allow simple counting while also generating advanced statistics.
