@@ -134,6 +134,9 @@ public class CounterListActivity extends Activity {
 	protected void onResume() {
 		super.onResume();
 		
+		// Set the title
+		setTitle("Counter List");
+		
 		// Refresh the list
 		this.refreshList(true);
 	}
