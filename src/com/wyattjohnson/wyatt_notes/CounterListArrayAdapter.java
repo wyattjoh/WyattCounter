@@ -38,8 +38,7 @@ class CounterListArrayAdapter extends ArrayAdapter<Counter> {
 	                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
 	                0.5f);
 			anim.setInterpolator(new LinearInterpolator());
-			anim.setRepeatCount(1);
-			anim.setDuration(700);
+			anim.setDuration(500);
 
 			// Start animating the image
 			ImageView image_icon = (ImageView) v.findViewById(R.id.addCounterIcon);
