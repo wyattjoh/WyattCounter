@@ -18,5 +18,12 @@
 	<string name="incrementCounter">Increment Counter</string>
 	<string name="counterDetails">Counter Details</string>
 	<string name="blank_counter_name_msg">Counter name cannot be blank</string>
+	<string name="add_counter">Add Counter</string>
+	<string name="sort_list">Sort List</string>
+	<string name="counter_name">Counter Name</string>
+	<string name="dummy_stat_name">Jan 12, 2014 11:00AM</string>
+	<string name="dummy_stat_value">10</string>
+	<string name="dummy_counter_name">Cow</string>
+	<string name="dummy_counter_value">10</string>
     
 </resources>

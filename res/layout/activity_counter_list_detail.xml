@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:text="Cows"
+        android:text="@string/dummy_counter_name"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
@@ -23,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/counterDetailTitle"
         android:layout_below="@+id/counterDetailTitle"
-        android:text="123456"
+        android:text="@string/dummy_counter_value"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#4492C2" />
 

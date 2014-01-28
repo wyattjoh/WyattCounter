@@ -4,7 +4,7 @@
         android:id="@+id/addCounterAction"
         android:showAsAction="ifRoom"
         android:icon="@drawable/ic_action_new"
-        android:title="Add Counter"
+        android:title="@string/add_counter"
         android:onClick="addCounterAction"
         />
     

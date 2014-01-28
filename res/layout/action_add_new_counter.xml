@@ -8,7 +8,7 @@
         android:id="@+id/addCounterTextField"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Counter Name"
+        android:hint="@string/counter_name"
         android:layout_marginTop="16dp"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
