@@ -17,7 +17,7 @@ import android.widget.TextView;
  * Responsible for managing the list of counters from CounterList
  *
  */
-class CounterListAdapter extends ArrayAdapter<Counter> {
+class CounterListArrayAdapter extends ArrayAdapter<Counter> {
 	/**
 	 * @author wyatt
 	 *
@@ -42,7 +42,7 @@ class CounterListAdapter extends ArrayAdapter<Counter> {
 	private CounterListActivity counterListActivity;
 	private CounterListController counterListController;
 
-	public CounterListAdapter(CounterListActivity counterListActivity, CounterListController counterListController) {
+	public CounterListArrayAdapter(CounterListActivity counterListActivity, CounterListController counterListController) {
 		super(counterListActivity, R.layout.activity_main_list_cell, counterListController.getList());
 		
 		this.counterListActivity = counterListActivity;

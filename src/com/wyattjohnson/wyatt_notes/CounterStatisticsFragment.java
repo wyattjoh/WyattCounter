@@ -67,7 +67,7 @@ public class CounterStatisticsFragment extends Fragment {
 	
 	private void populateFragment(View rootView, ArrayList<String[]> resource) {
 		// Build Adapter
-		ArrayAdapter<String[]> adapter = new CounterStatisticsAdapter(this, resource);
+		ArrayAdapter<String[]> adapter = new CounterStatisticsArrayAdapter(this, resource);
 		
 		// Get the list view
 		ListView list = (ListView) rootView.findViewById(R.id.fragmentListView);

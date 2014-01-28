@@ -145,7 +145,7 @@ public class CounterListActivity extends Activity {
 	 */
 	private void populateListView() {
 		this.counterListController = CounterListController.shared(getApplicationContext());
-		this.counterListAdapter = new CounterListAdapter(this, counterListController);
+		this.counterListAdapter = new CounterListArrayAdapter(this, counterListController);
 		
 		ListView list = (ListView) findViewById(R.id.counterListActivity);
 		list.setAdapter(this.counterListAdapter);

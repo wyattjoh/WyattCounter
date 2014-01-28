@@ -17,10 +17,10 @@ import android.widget.TextView;
  * Responsible for managing the list of CounterStatistics
  *
  */
-class CounterStatisticsAdapter extends ArrayAdapter<String[]> {
+class CounterStatisticsArrayAdapter extends ArrayAdapter<String[]> {
 	private CounterStatisticsFragment counterListStatisticsFragment;
 
-	public CounterStatisticsAdapter(CounterStatisticsFragment counterListStatisticsFragment, ArrayList<String[]> statsArray) {
+	public CounterStatisticsArrayAdapter(CounterStatisticsFragment counterListStatisticsFragment, ArrayList<String[]> statsArray) {
 		super(counterListStatisticsFragment.getActivity(), R.layout.fragment_counter_list_stats_cell, statsArray);
 		// TODO Auto-generated constructor stub
 		this.counterListStatisticsFragment = counterListStatisticsFragment;
