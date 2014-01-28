@@ -27,7 +27,7 @@
         android:layout_toLeftOf="@+id/detailsButton" >
 
         <ImageView
-            android:id="@+id/imageView1"
+            android:id="@+id/addCounterIcon"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="0.82"

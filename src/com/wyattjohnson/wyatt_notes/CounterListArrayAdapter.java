@@ -4,10 +4,15 @@
 package com.wyattjohnson.wyatt_notes;
 
 import com.wyattjohnson.wyatt_notes.R;
+
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.RotateAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -27,6 +32,19 @@ class CounterListArrayAdapter extends ArrayAdapter<Counter> {
 	private final class IncrementListener implements View.OnClickListener {
 		@Override
 		public void onClick(View v) {
+			// http://stackoverflow.com/questions/2032304/android-imageview-animation
+			// http://stackoverflow.com/questions/3805622/drawable-rotating-around-its-center-android
+			RotateAnimation anim = new RotateAnimation(0.0f, 360.0f,
+	                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF,
+	                0.5f);
+			anim.setInterpolator(new LinearInterpolator());
+			anim.setRepeatCount(1);
+			anim.setDuration(700);
+
+			// Start animating the image
+			ImageView image_icon = (ImageView) v.findViewById(R.id.addCounterIcon);
+			image_icon.startAnimation(anim);
+			
 		    // do you work here
 			LinearLayout clickAreaLayout = (LinearLayout) v.findViewById(R.id.counterIncrementArea);
 			int index = ((Integer)clickAreaLayout.getTag()).intValue();
