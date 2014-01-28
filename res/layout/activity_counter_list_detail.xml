@@ -25,7 +25,7 @@
         android:layout_below="@+id/counterDetailTitle"
         android:text="@string/dummy_counter_value"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#4492C2" />
+        android:textColor="@color/blue_color" />
 
     <ListView
         android:id="@+id/listView1"
