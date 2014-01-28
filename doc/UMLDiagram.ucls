@@ -3,8 +3,8 @@
   realizations="true" associations="true" dependencies="false" nesting-relationships="false">  
   <class id="1" language="java" name="com.wyattjohnson.wyatt_notes.CounterListActivity" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListActivity.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="96" y="519"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <position height="-1" width="-1" x="45" y="519"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -13,8 +13,8 @@
   <class id="2" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatisticsFragment" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsFragment.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="759" y="217"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <position height="-1" width="-1" x="888" y="217"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -24,7 +24,7 @@
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListController.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="482" y="519"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -34,7 +34,7 @@
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsActivity.java" binary="false" 
     corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="480" y="272"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -44,7 +44,7 @@
     project="WyattsCounter" file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsPagerAdapter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="478" y="70"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -52,8 +52,8 @@
   </class>  
   <class id="6" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatistics" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatistics.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="96" y="782"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <position height="-1" width="-1" x="46" y="782"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -61,8 +61,8 @@
   </class>  
   <class id="7" language="java" name="com.wyattjohnson.wyatt_notes.CounterList" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterList.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="778" y="519"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <position height="-1" width="-1" x="887" y="519"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -71,7 +71,7 @@
   <class id="8" language="java" name="com.wyattjohnson.wyatt_notes.Counter" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/Counter.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="-1" width="-1" x="482" y="782"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -80,8 +80,8 @@
   <class id="9" language="java" name="com.wyattjohnson.wyatt_notes.CounterStatisticsArrayAdapter" 
     project="WyattsCounter" file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterStatisticsArrayAdapter.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="758" y="347"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <position height="-1" width="-1" x="887" y="347"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
@@ -90,18 +90,18 @@
   <class id="10" language="java" name="com.wyattjohnson.wyatt_notes.CounterListArrayAdapter" project="WyattsCounter" 
     file="/WyattsCounter/src/com/wyattjohnson/wyatt_notes/CounterListArrayAdapter.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="-1" width="-1" x="96" y="312"/>    
-    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" accessors="true" 
+    <position height="-1" width="-1" x="47" y="266"/>    
+    <display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" accessors="true" 
       visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="false" static="true"/>    
     </display>  
   </class>  
   <association id="11">    
-    <bendpoint x="757" y="70"/>    
+    <bendpoint x="886" y="70"/>    
     <end type="SOURCE" refId="5" navigable="false">      
       <attribute id="12" name="fragment">        
-        <position height="18" width="56" x="796" y="145"/>      
+        <position height="18" width="56" x="925" y="145"/>      
       </attribute>      
       <multiplicity id="13" minimum="0" maximum="1"/>    
     </end>    
@@ -127,10 +127,9 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="20">    
-    <bendpoint x="308" y="313"/>    
     <end type="SOURCE" refId="10" navigable="false">      
       <attribute id="21" name="counterListController">        
-        <position height="18" width="122" x="230" y="290"/>      
+        <position height="18" width="122" x="177" y="324"/>      
       </attribute>      
       <multiplicity id="22" minimum="0" maximum="1"/>    
     </end>    
@@ -210,7 +209,7 @@
   <association id="42">    
     <end type="SOURCE" refId="10" navigable="false">      
       <attribute id="43" name="counterListActivity">        
-        <position height="18" width="106" x="100" y="361"/>      
+        <position height="18" width="106" x="50" y="361"/>      
       </attribute>      
       <multiplicity id="44" minimum="0" maximum="1"/>    
     </end>    
@@ -220,14 +219,14 @@
   <association id="45">    
     <end type="SOURCE" refId="9" navigable="false">      
       <attribute id="46" name="counterListStatisticsFragment">        
-        <position height="18" width="168" x="781" y="289"/>      
+        <position height="18" width="168" x="910" y="289"/>      
       </attribute>      
       <multiplicity id="47" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="2" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="false" 
+  <classifier-display autosize="true" stereotype="false" package="false" initial-value="false" signature="true" 
     accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
     <operations public="true" package="true" protected="true" private="false" static="true"/>  
