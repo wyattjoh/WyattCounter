@@ -17,5 +17,6 @@
     <string name="action_rename">Rename Counter</string>
 	<string name="incrementCounter">Increment Counter</string>
 	<string name="counterDetails">Counter Details</string>
+	<string name="blank_counter_name_msg">Counter name cannot be blank</string>
     
 </resources>

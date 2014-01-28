@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class CounterStatisticsActivity extends FragmentActivity implements
 		ActionBar.TabListener {
@@ -54,12 +55,18 @@ public class CounterStatisticsActivity extends FragmentActivity implements
             	   
             	   // Extract the counter name
             	   String counterName = edit.getText().toString();
-
-            	   // Update the name
-            	   counterListController.getSelectedCounter().setName(counterName);
             	   
-            	   // Finish the activity
-            	   finish();
+            	   if (counterName.length() <= 0) {
+            		   Toast toast = Toast.makeText(getApplicationContext(), R.string.blank_counter_name_msg, Toast.LENGTH_SHORT);
+            		   toast.show();
+            	   }
+            	   else {
+	            	   // Update the name
+	            	   counterListController.getSelectedCounter().setName(counterName);
+	            	   
+	            	   // Finish the activity
+	            	   finish();
+            	   }
                }
 	        });
 

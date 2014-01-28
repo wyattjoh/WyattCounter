@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 /**
  * @author wyatt
@@ -58,11 +59,17 @@ public class CounterListActivity extends Activity {
             	   // Extract the counter name
             	   String counterName = edit.getText().toString();
             	   
-            	   // Add a counter with this name
-            	   counterListController.addCounter(counterName);
-            	   
-            	   // Refresh the list
-            	   refreshList(true);
+            	   if (counterName.length() <= 0) {
+            		   Toast toast = Toast.makeText(getApplicationContext(), R.string.blank_counter_name_msg, Toast.LENGTH_SHORT);
+            		   toast.show();
+            	   }
+            	   else {
+	            	   // Add a counter with this name
+	            	   counterListController.addCounter(counterName);
+	            	   
+	            	   // Refresh the list
+	            	   refreshList(true);
+            	   }
                }
 	        });
 
