@@ -159,7 +159,7 @@
   <association id="32">    
     <end type="SOURCE" refId="3" navigable="false">      
       <attribute id="33" name="counterListStatisticsActivity">        
-        <position height="18" width="154" x="550" y="129"/>      
+        <position height="18" width="154" x="491" y="124"/>      
       </attribute>      
       <multiplicity id="34" minimum="0" maximum="1"/>    
     </end>    
@@ -175,9 +175,11 @@
     <display labels="true" multiplicity="true"/>  
   </association>  
   <association id="38">    
+    <bendpoint x="148" y="155"/>    
+    <bendpoint x="148" y="63"/>    
     <end type="SOURCE" refId="4" navigable="false">      
       <attribute id="39" name="counterListStatisticsPagerAdapter">        
-        <position height="18" width="195" x="208" y="122"/>      
+        <position height="18" width="195" x="41" y="37"/>      
       </attribute>      
       <multiplicity id="40" minimum="0" maximum="1"/>    
     </end>    
